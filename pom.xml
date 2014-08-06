@@ -37,6 +37,24 @@
         <buildhelper.plugin.version>1.7</buildhelper.plugin.version>
     </properties>
 
+
+    <repositories>
+        <repository>
+            <id>jboss-maven-repository</id>
+            <name>JBoss Maven Repository</name>
+            <url>http://maven.repository.redhat.com/techpreview/all/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <dependencyManagement>
         <dependencies>
             <!-- JBoss distributes a complete set of Java EE 6 APIs including 
