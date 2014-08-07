@@ -398,13 +398,13 @@
       <repository>
          <id>nexus</id>
          <name>Nexus</name>
-         <url>http://localhost:8081/nexus/content/repositories/releases/</url>
+         <url>http://nexus-enhamtest.rhcloud.com:8081/nexus/content/repositories/releases/</url>
       </repository>
-      <!--<snapshotRepository>
+      <snapshotRepository>
          <id>deployment</id>
          <name>Internal Releases</name>
-         <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
-      </snapshotRepository>-->
+         <url>http://nexus-enhamtest.rhcloud.com:8081/nexus/content/repositories/snapshots/</url>
+      </snapshotRepository>
     </distributionManagement>
 
 </project>
