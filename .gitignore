@@ -5,3 +5,7 @@ classpath
 
 #Maven
 target/
+target
+.settings/*
+!.settings/.jsdtscope
+.classpath
