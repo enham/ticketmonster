@@ -396,13 +396,13 @@
 
     <distributionManagement>
       <repository>
-         <id>enhamtest-nexus</id>
+         <id>nexus</id>
          <name>Nexus</name>
          <url>http://nexus-enhamprod.rhcloud.com/nexus/content/repositories/releases/</url>
       </repository>
       <snapshotRepository>
-         <id>enhamtest-nexus-snapshot</id>
-         <name>Nexus Snapshot</name>
+         <id>nexus-snapshots</id>
+         <name>Nexus Snapshots</name>
          <url>http://nexus-enhamprod.rhcloud.com/nexus/content/repositories/snapshots/</url>
       </snapshotRepository>
     </distributionManagement>
