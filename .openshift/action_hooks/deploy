@@ -1,0 +1,7 @@
+pushd ${OPENSHIFT_REPO_DIR} > /dev/null
+echo "MVN_DEPLOY=${MVN_DEPLOY}"
+if [ "${MVN_DEPLOY}" == "true" ]; then
+	echo "Executing mvn deploy"
+	mvn deploy
+fi
+popd > /dev/null
