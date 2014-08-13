@@ -1,5 +1,5 @@
 pushd ${OPENSHIFT_REPO_DIR} > /dev/null
-echo "MVN_TEST=${MVN_TEST}"
+#echo "MVN_TEST=${MVN_TEST}"
 if [ "${MVN_TEST}" == "true" ]; then
 	echo "Executing mvn test"
 	mvn test
