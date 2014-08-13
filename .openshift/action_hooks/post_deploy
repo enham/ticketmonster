@@ -2,6 +2,6 @@ pushd ${OPENSHIFT_REPO_DIR} > /dev/null
 echo "MVN_DEPLOY=${MVN_DEPLOY}"
 if [ "${MVN_DEPLOY}" == "true" ]; then
 	echo "Executing mvn deploy"
-	mvn deploy --settings $OPENSHIFT_REPO_DIR/settings.xml
+	mvn deploy --settings $OPENSHIFT_REPO_DIR/maven-settings.xml
 fi
 popd > /dev/null
