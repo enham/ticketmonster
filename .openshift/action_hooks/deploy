@@ -1,9 +1,7 @@
 pushd ${OPENSHIFT_REPO_DIR} > /dev/null
-echo "MVN_DEPLOY=${MVN_DEPLOY}"
-if [ "${MVN_DEPLOY}" == "true" ]; then
-	echo "Executing mvn deploy"
-	rm -f $OPENSHIFT_DATA_DIR/settings.xml
-	echo -e "<settings>\n\t<servers>\n\t\t<server>\n\t\t\t<id>nexus-snapshots</id>\n\t\t\t<username>${NEXUS_USERNAME}</username>\n\t\t\t<password>${NEXUS_PASSWORD}</password>\n\t\t</server>\n\t</servers>\n</settings>\n" > $OPENSHIFT_DATA_DIR/settings.xml
-	mvn deploy --settings $OPENSHIFT_DATA_DIR/settings.xml
+echo "MVN_TEST=${MVN_TEST}"
+if [ "${MVN_TEST}" == "true" ]; then
+	echo "Executing mvn test"
+	mvn test
 fi
 popd > /dev/null
