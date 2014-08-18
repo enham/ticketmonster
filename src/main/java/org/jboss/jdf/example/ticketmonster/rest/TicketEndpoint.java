@@ -31,8 +31,7 @@ public class TicketEndpoint
    {
       Ticket entity = dto.fromDTO(null, em);
       em.persist(entity);
-      return
-Response.created(UriBuilder.fromResource(TicketEndpoint.class).path(String.valueOf(entity.getId())).build()).build();
+      return Response.created(UriBuilder.fromResource(TicketEndpoint.class).path(String.valueOf(entity.getId())).build()).build();
    }
 
    @DELETE
