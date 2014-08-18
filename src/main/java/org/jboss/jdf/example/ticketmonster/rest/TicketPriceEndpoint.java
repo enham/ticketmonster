@@ -25,15 +25,6 @@ public class TicketPriceEndpoint
    @PersistenceContext(unitName="primary")
    private EntityManager em;
 
-   @POST
-   @Consumes("application/json")
-   public Response create(TicketPriceDTO dto)
-   {
-      TicketPrice entity = dto.fromDTO(null, em);
-      em.persist(entity);
-      return Response.created(UriBuilder.fromResource(TicketPriceEndpoint.class).path(String.valueOf(entity.getId())).build()).build();
-   }
-
    @DELETE
    @Path("/{id:[0-9][0-9]*}")
    public Response deleteById(@PathParam("id") Long id)
